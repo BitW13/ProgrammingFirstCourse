@@ -65,6 +65,11 @@ namespace Lab10
             return array;
         }
 
+        static int IndexOfMin(double[] array)
+        {
+            return Array.IndexOf(array, array.Min());
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("length of array:");
@@ -80,7 +85,7 @@ namespace Lab10
             }
 
             Console.WriteLine();
-            Console.WriteLine(array.Min());
+            Console.WriteLine(IndexOfMin(array));
             Console.WriteLine(GetSumNumbersBetweenNegativeNumbers(array));
 
             array = Sort(array);
