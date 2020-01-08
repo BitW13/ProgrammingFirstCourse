@@ -65,6 +65,7 @@ namespace Lab9
 
             double[] array = new double[n];
 
+            Console.WriteLine("Array elements:");
             for (int i = 0; i < n; i++)
             {
                 array[i] = Convert.ToDouble(Console.ReadLine());

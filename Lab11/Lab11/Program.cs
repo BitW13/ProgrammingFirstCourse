@@ -17,6 +17,7 @@ namespace Lab11
 
             int[,] array = new int[n, m];
 
+            Console.WriteLine("array elements:");
             for(int i =0; i< n; i++)
             {
                 for(int j = 0; j< m; j++)

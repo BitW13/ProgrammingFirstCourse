@@ -75,6 +75,8 @@ namespace Lab10
 
             double[] array = new double[n];
 
+            Console.WriteLine("array elements:");
+
             for (int i = 0; i < n; i++)
             {
                 array[i] = Convert.ToDouble(Console.ReadLine());
