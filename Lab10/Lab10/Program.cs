@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab10
 {
@@ -12,9 +9,9 @@ namespace Lab10
         {
             int index = -1;
 
-            for(int i = startIndex; i<array.Length; i++)
+            for (int i = startIndex; i < array.Length; i++)
             {
-                if(array[i] < 0)
+                if (array[i] < 0)
                 {
                     index = i;
                     break;
@@ -37,7 +34,7 @@ namespace Lab10
 
             int endIndex = IndexOfNegativeNumber(array, index + 1);
 
-            if(endIndex == -1)
+            if (endIndex == -1)
             {
                 endIndex = array.Length;
             }

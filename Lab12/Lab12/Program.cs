@@ -1,9 +1,5 @@
 ﻿using Lab12.Labs;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab12
 {
@@ -67,7 +63,7 @@ namespace Lab12
                         Console.WriteLine("Неверный ввод!");
                         break;
                 }
-            }            
+            }
         }
     }
 }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab11_2
 {
@@ -32,20 +28,20 @@ namespace Lab11_2
             int index = -1;
             int numberForAllRows = 0;
 
-            for(int i = 0; i< rows; i++)
+            for (int i = 0; i < rows; i++)
             {
-                int value = array[i,0];
+                int value = array[i, 0];
                 int number = 0;
 
-                for(int j = 0; j< columns; j++)
+                for (int j = 0; j < columns; j++)
                 {
-                    if(array[i,j] == value)
+                    if (array[i, j] == value)
                     {
                         number++;
                     }
                     else
                     {
-                        if(number > numberForAllRows)
+                        if (number > numberForAllRows)
                         {
                             numberForAllRows = number;
                             index = i;
@@ -65,7 +61,7 @@ namespace Lab11_2
         {
             Console.WriteLine("n:");
             int n = Convert.ToInt32(Console.ReadLine());
-            
+
             Console.WriteLine("m:");
             int m = Convert.ToInt32(Console.ReadLine());
 
