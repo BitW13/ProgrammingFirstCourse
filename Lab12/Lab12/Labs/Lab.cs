@@ -426,12 +426,10 @@ namespace Lab12.Labs
                 return result;
             }
 
-            for (int i = index + 1; i < array.Length; i++)
+            int lastIndex = Array.LastIndexOf(array, 0);
+
+            for (int i = index; i < lastIndex; i++)
             {
-                if (array[i] == 0)
-                {
-                    break;
-                }
 
                 result += array[i];
             }
@@ -445,7 +443,7 @@ namespace Lab12.Labs
             {
                 for (int j = i + 1; j < array.Length; j++)
                 {
-                    if (array[i] > array[j])
+                    if (array[i] >= 0 && array[j] < 0)
                     {
                         double temp = array[i];
                         array[i] = array[j];
@@ -472,7 +470,7 @@ namespace Lab12.Labs
             }
 
             Console.WriteLine();
-            Console.WriteLine(array.Min());
+            Console.WriteLine(IndexOfMin(array));
             Console.WriteLine(GetSumNumbersBetweenNegativeNumbers(array));
 
             array = SortByAbs(array);
@@ -481,6 +479,11 @@ namespace Lab12.Labs
             {
                 Console.Write(item + " ");
             }
+        }
+
+        static int IndexOfMin(double[] array)
+        {
+            return Array.IndexOf(array, array.Min());
         }
 
         static int IndexOfNegativeNumber(double[] array, int startIndex)
@@ -547,25 +550,30 @@ namespace Lab12.Labs
         {
             Console.WriteLine("rows:");
             int n = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("columns:");
-            int m = Convert.ToInt32(Console.ReadLine());
 
-            int[,] array = new int[n, m];
+            int[,] array = new int[n, n];
 
-            Console.WriteLine("array elements:");
+            Random random = new Random();
+
             for (int i = 0; i < n; i++)
             {
-                for (int j = 0; j < m; j++)
+                for (int j = 0; j < n; j++)
                 {
-                    array[i, j] = Convert.ToInt32(Console.ReadLine());
+                    array[i, j] = random.Next(-10, 100);
+
+                    Console.Write(array[i, j] + " ");
                 }
+                Console.WriteLine();
             }
+
+            Console.WriteLine();
+
 
             for (int i = 0; i < n; i++)
             {
                 bool isPositive = true;
 
-                for (int j = 0; j < m; j++)
+                for (int j = 0; j < n; j++)
                 {
                     if (array[i, j] < 0)
                     {
@@ -578,7 +586,7 @@ namespace Lab12.Labs
                 {
                     int result = 1;
 
-                    for (int j = 0; j < m; j++)
+                    for (int j = 0; j < n; j++)
                     {
                         result *= array[i, j];
                     }
@@ -586,8 +594,6 @@ namespace Lab12.Labs
                     Console.WriteLine($"{i} |----| {result}");
                 }
             }
-
-
         }
 
         public static void Lab11_2()
