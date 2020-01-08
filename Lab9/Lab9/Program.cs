@@ -27,12 +27,10 @@ namespace Lab9
                 return result;
             }
 
-            for (int i = index + 1; i < array.Length; i++)
+            int lastIndex = Array.LastIndexOf(array, 0);
+
+            for (int i = index; i < lastIndex; i++)
             {
-                if (array[i] == 0)
-                {
-                    break;
-                }
 
                 result += array[i];
             }
@@ -46,7 +44,7 @@ namespace Lab9
             {
                 for(int j = i+1; j<array.Length; j++)
                 {
-                    if(array[i] > array[j])
+                    if(array[i] >= 0 && array[j] < 0)
                     {
                         double temp = array[i];
                         array[i] = array[j];
