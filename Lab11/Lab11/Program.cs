@@ -8,25 +8,30 @@ namespace Lab11
         {
             Console.WriteLine("rows:");
             int n = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("columns:");
-            int m = Convert.ToInt32(Console.ReadLine());
 
-            int[,] array = new int[n, m];
+            int[,] array = new int[n, n];
 
-            Console.WriteLine("array elements:");
-            for (int i = 0; i < n; i++)
+            Random random = new Random();
+
+            for(int i = 0; i< n; i++)
             {
-                for (int j = 0; j < m; j++)
+                for(int j = 0; j< n; j++)
                 {
-                    array[i, j] = Convert.ToInt32(Console.ReadLine());
+                    array[i, j] = random.Next(-10, 100);
+
+                    Console.Write(array[i,j] + " ");
                 }
+                Console.WriteLine();
             }
+
+            Console.WriteLine();
+
 
             for (int i = 0; i < n; i++)
             {
                 bool isPositive = true;
 
-                for (int j = 0; j < m; j++)
+                for (int j = 0; j < n; j++)
                 {
                     if (array[i, j] < 0)
                     {
@@ -39,7 +44,7 @@ namespace Lab11
                 {
                     int result = 1;
 
-                    for (int j = 0; j < m; j++)
+                    for (int j = 0; j < n; j++)
                     {
                         result *= array[i, j];
                     }
