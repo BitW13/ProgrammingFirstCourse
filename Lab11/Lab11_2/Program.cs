@@ -4,13 +4,13 @@ namespace Lab11_2
 {
     class Program
     {
-        static int GetNumberOfRowContainsZero(int[,] array, int rows, int columns)
+        static int GetNumberOfColumnsContainsZero(int[,] array, int rows, int columns)
         {
             int result = 0;
 
-            for (int i = 0; i < rows; i++)
+            for (int j = 0; j < columns; j++)
             {
-                for (int j = 0; j < columns; j++)
+                for (int i = 0; i < rows; i++)
                 {
                     if (array[i, j] == 0)
                     {
@@ -67,17 +67,21 @@ namespace Lab11_2
 
             int[,] array = new int[n, m];
 
-            Console.WriteLine("array elements:");
+            Random random = new Random();
 
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < m; j++)
                 {
-                    array[i, j] = Convert.ToInt32(Console.ReadLine());
+                    array[i, j] = random.Next(-10, 100);
+
+                    Console.Write(array[i, j] + " ");
                 }
+
+                Console.WriteLine();
             }
 
-            Console.WriteLine(GetNumberOfRowContainsZero(array, n, m));
+            Console.WriteLine(GetNumberOfColumnsContainsZero(array, n, m));
 
             Console.WriteLine(GetNumberOfRowContainsMostNumberOfSameValue(array, n, m));
         }

@@ -51,15 +51,20 @@ namespace Lab10
         {
             for (int i = 0; i < array.Length; i++)
             {
-                for (int j = i + 1; j < array.Length; j++)
+                if(Math.Abs(array[i]) > 1)
                 {
-                    if (Math.Abs(array[i]) > Math.Abs(array[j]))
+                    for (int j = i + 1; j < array.Length; j++)
                     {
-                        double temp = array[i];
-                        array[i] = array[j];
-                        array[j] = temp;
+                        if (Math.Abs(array[j]) <= 1)
+                        {
+                            double temp = array[i];
+                            array[i] = array[j];
+                            array[j] = temp;
+
+                            break;
+                        }
                     }
-                }
+                }                
             }
 
             return array;
