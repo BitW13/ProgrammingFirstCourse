@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Lab11_2
 {
-    class Program
+    public static class LabElevenTwo
     {
         static int GetNumberOfColumnsContainsZero(int[,] array, int rows, int columns)
         {
@@ -57,7 +61,7 @@ namespace Lab11_2
             return index;
         }
 
-        static void Main(string[] args)
+        public static void Main()
         {
             Console.WriteLine("n:");
             int n = Convert.ToInt32(Console.ReadLine());

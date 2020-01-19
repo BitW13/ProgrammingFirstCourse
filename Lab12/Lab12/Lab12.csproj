@@ -50,5 +50,71 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Lab10\Lab10\Lab10.csproj">
+      <Project>{083a7965-4e8d-492a-8829-9012d77be140}</Project>
+      <Name>Lab10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lab11\Lab11\Lab11.csproj">
+      <Project>{38f8751a-a141-4a08-b6ea-c43ee60994b1}</Project>
+      <Name>Lab11</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lab11\Lab11_2\Lab11_2.csproj">
+      <Project>{288a76df-f9d4-4652-ac1b-9f913bc9e747}</Project>
+      <Name>Lab11_2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lab2\Lab2\Lab2.csproj">
+      <Project>{F33816D3-CCFD-4673-BA57-B4DD3D200595}</Project>
+      <Name>Lab2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lab3_1\Lab3_1\Lab3_1.csproj">
+      <Project>{4F7CEE2A-FDDF-47D3-A255-F6D63FFE70D0}</Project>
+      <Name>Lab3_1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lab3_2\Lab3_2\Lab3_2.csproj">
+      <Project>{9BA388CA-1493-417F-B0FF-9B0040F255DE}</Project>
+      <Name>Lab3_2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lab4_1\Lab4_1\Lab4_1.csproj">
+      <Project>{8EB48701-8AFE-452E-A10D-3B7A9D60A3BF}</Project>
+      <Name>Lab4_1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lab4_2\Lab4_2\Lab4_2.csproj">
+      <Project>{11C27ABF-0135-4072-8B02-E61DB7EDEE89}</Project>
+      <Name>Lab4_2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lab5\Lab5\Lab5.csproj">
+      <Project>{8A0F4947-ED7A-4C75-B805-EBA7DE2B6CE3}</Project>
+      <Name>Lab5</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lab5_2\Lab5_2\Lab5_2.csproj">
+      <Project>{DBFE1DF4-4B4C-4D89-8762-89B4A7742CAA}</Project>
+      <Name>Lab5_2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lab6\Lab6\Lab6.csproj">
+      <Project>{A9F71D06-F7E4-4ED2-8442-8048E8DBB5B1}</Project>
+      <Name>Lab6</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lab6_2\Lab6_2\Lab6_2.csproj">
+      <Project>{9805ad3e-3181-41d6-b317-17e666e7856f}</Project>
+      <Name>Lab6_2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lab7\Lab7\Lab7.csproj">
+      <Project>{BED921C8-A582-4F46-9877-794EE6E81D19}</Project>
+      <Name>Lab7</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lab8\Lab8\Lab8.csproj">
+      <Project>{879A086B-B534-459B-A73D-EC148AE0D7C2}</Project>
+      <Name>Lab8</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lab8\Lab8_2\Lab8_2.csproj">
+      <Project>{A20DAA65-C815-4147-8E2E-0C1C747C036E}</Project>
+      <Name>Lab8_2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lab9\Lab9\Lab9.csproj">
+      <Project>{DF766000-6EE1-4562-8964-7A1A8CE0A3BA}</Project>
+      <Name>Lab9</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

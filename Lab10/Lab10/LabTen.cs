@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Lab10
 {
-    class Program
+    public static class LabTen
     {
         static int IndexOfNegativeNumber(double[] array, int startIndex)
         {
@@ -51,7 +54,7 @@ namespace Lab10
         {
             for (int i = 0; i < array.Length; i++)
             {
-                if(Math.Abs(array[i]) > 1)
+                if (Math.Abs(array[i]) > 1)
                 {
                     for (int j = i + 1; j < array.Length; j++)
                     {
@@ -64,7 +67,7 @@ namespace Lab10
                             break;
                         }
                     }
-                }                
+                }
             }
 
             return array;
@@ -75,7 +78,7 @@ namespace Lab10
             return Array.IndexOf(array, array.Min());
         }
 
-        static void Main(string[] args)
+        public static void Main()
         {
             Console.WriteLine("length of array:");
             int n = Convert.ToInt32(Console.ReadLine());

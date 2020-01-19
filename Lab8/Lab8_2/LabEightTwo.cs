@@ -2,9 +2,9 @@
 
 namespace Lab8_2
 {
-    class Program
+    public static class LabEightTwo
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             Console.WriteLine("x min:");
             double xMin = Convert.ToDouble(Console.ReadLine());

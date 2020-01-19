@@ -455,6 +455,7 @@ namespace Lab12.Labs
             return array;
         }
 
+
         public static void Lab10()
         {
             Console.WriteLine("length of array:");
@@ -479,11 +480,6 @@ namespace Lab12.Labs
             {
                 Console.Write(item + " ");
             }
-        }
-
-        static int IndexOfMin(double[] array)
-        {
-            return Array.IndexOf(array, array.Min());
         }
 
         static int IndexOfNegativeNumber(double[] array, int startIndex)
@@ -532,18 +528,28 @@ namespace Lab12.Labs
         {
             for (int i = 0; i < array.Length; i++)
             {
-                for (int j = i + 1; j < array.Length; j++)
+                if (Math.Abs(array[i]) > 1)
                 {
-                    if (Math.Abs(array[i]) > Math.Abs(array[j]))
+                    for (int j = i + 1; j < array.Length; j++)
                     {
-                        double temp = array[i];
-                        array[i] = array[j];
-                        array[j] = temp;
+                        if (Math.Abs(array[j]) <= 1)
+                        {
+                            double temp = array[i];
+                            array[i] = array[j];
+                            array[j] = temp;
+
+                            break;
+                        }
                     }
                 }
             }
 
             return array;
+        }
+
+        static int IndexOfMin(double[] array)
+        {
+            return Array.IndexOf(array, array.Min());
         }
 
         public static void Lab11_1()
@@ -606,28 +612,32 @@ namespace Lab12.Labs
 
             int[,] array = new int[n, m];
 
-            Console.WriteLine("array elements:");
+            Random random = new Random();
 
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < m; j++)
                 {
-                    array[i, j] = Convert.ToInt32(Console.ReadLine());
+                    array[i, j] = random.Next(-10, 100);
+
+                    Console.Write(array[i, j] + " ");
                 }
+
+                Console.WriteLine();
             }
 
-            Console.WriteLine(GetNumberOfRowContainsZero(array, n, m));
+            Console.WriteLine(GetNumberOfColumnsContainsZero(array, n, m));
 
             Console.WriteLine(GetNumberOfRowContainsMostNumberOfSameValue(array, n, m));
         }
 
-        static int GetNumberOfRowContainsZero(int[,] array, int rows, int columns)
+        static int GetNumberOfColumnsContainsZero(int[,] array, int rows, int columns)
         {
             int result = 0;
 
-            for (int i = 0; i < rows; i++)
+            for (int j = 0; j < columns; j++)
             {
-                for (int j = 0; j < columns; j++)
+                for (int i = 0; i < rows; i++)
                 {
                     if (array[i, j] == 0)
                     {

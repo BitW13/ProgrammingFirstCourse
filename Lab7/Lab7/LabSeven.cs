@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Lab7
 {
-    class Program
+    public static class LabSeven
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             double sum = 1;
 
@@ -16,7 +16,7 @@ namespace Lab7
 
             int i = 1;
 
-            while(sum.ToString().Length < E.ToString().Length)
+            while (sum.ToString().Length < E.ToString().Length)
             {
                 sum += 1 / (Math.Pow(2, i));
 

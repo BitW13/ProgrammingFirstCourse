@@ -2,7 +2,7 @@
 
 namespace Lab9
 {
-    class Program
+    public static class LabNine
     {
         static double GetMultiplicationEvenArrayElements(double[] array)
         {
@@ -40,11 +40,11 @@ namespace Lab9
 
         static double[] Sort(double[] array)
         {
-            for(int i = 0; i< array.Length; i++)
+            for (int i = 0; i < array.Length; i++)
             {
-                for(int j = i+1; j<array.Length; j++)
+                for (int j = i + 1; j < array.Length; j++)
                 {
-                    if(array[i] >= 0 && array[j] < 0)
+                    if (array[i] >= 0 && array[j] < 0)
                     {
                         double temp = array[i];
                         array[i] = array[j];
@@ -56,7 +56,7 @@ namespace Lab9
             return array;
         }
 
-        static void Main(string[] args)
+        public static void Main()
         {
             Console.WriteLine("length of array:");
             int n = Convert.ToInt32(Console.ReadLine());
@@ -75,7 +75,7 @@ namespace Lab9
 
             array = Sort(array);
 
-            foreach(double item in array)
+            foreach (double item in array)
             {
                 Console.Write(item + " ");
             }

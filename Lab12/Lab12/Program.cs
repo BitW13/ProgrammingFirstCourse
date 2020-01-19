@@ -1,4 +1,20 @@
-﻿using Lab12.Labs;
+﻿using Lab10;
+using Lab11;
+using Lab11_2;
+using Lab12.Labs;
+using Lab2;
+using Lab3_1;
+using Lab3_2;
+using Lab4_1;
+using Lab4_2;
+using Lab5;
+using Lab5_2;
+using Lab6;
+using Lab6_2;
+using Lab7;
+using Lab8;
+using Lab8_2;
+using Lab9;
 using System;
 
 namespace Lab12
@@ -18,43 +34,52 @@ namespace Lab12
                 switch (key)
                 {
                     case "2":
-                        Lab.Lab2();
+                        LabTwo.Main();
                         break;
                     case "3.1":
-                        Lab.Lab3_1();
+                        LabThreeOne.Main();
                         break;
                     case "3.2":
-                        Lab.Lab3_2();
+                        LabThreeTwo.Main();
                         break;
                     case "4.1":
-                        Lab.Lab4_1();
+                        LabFour.Main();
                         break;
                     case "4.2":
-                        Lab.Lab4_2();
+                        LabFourTwo.Main();
                         break;
                     case "5.1":
-                        Lab.Lab5_1();
+                        LabFive.Main();
                         break;
                     case "5.2":
-                        Lab.Lab5_2();
+                        LabFiveTwo.Main();
                         break;
                     case "6.1":
-                        Lab.Lab6_1();
+                        LabSix.Main();
                         break;
                     case "6.2":
-                        Lab.Lab6_2();
+                        LabSixTwo.Main();
                         break;
                     case "7":
-                        Lab.Lab7();
+                        LabSeven.Main();
                         break;
                     case "8.1":
-                        Lab.Lab8_1();
+                        LabEight.Main();
                         break;
                     case "8.2":
-                        Lab.Lab8_2();
+                        LabEightTwo.Main();
                         break;
                     case "9":
-                        Lab.Lab9();
+                        LabNine.Main();
+                        break;
+                    case "10":
+                        LabTen.Main();
+                        break;
+                    case "11.1":
+                        LabEleven.Main();
+                        break;
+                    case "11.2":
+                        LabElevenTwo.Main();
                         break;
                     case "exit":
                         next = false;

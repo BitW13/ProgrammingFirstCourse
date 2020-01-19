@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Lab8
 {
-    class Program
+    public static class LabEight
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             for (int i = 0; i < 5; i++)
             {

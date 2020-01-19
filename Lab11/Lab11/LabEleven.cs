@@ -2,9 +2,9 @@
 
 namespace Lab11
 {
-    class Program
+    public static class LabEleven
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             Console.WriteLine("rows:");
             int n = Convert.ToInt32(Console.ReadLine());
@@ -13,13 +13,13 @@ namespace Lab11
 
             Random random = new Random();
 
-            for(int i = 0; i< n; i++)
+            for (int i = 0; i < n; i++)
             {
-                for(int j = 0; j< n; j++)
+                for (int j = 0; j < n; j++)
                 {
                     array[i, j] = random.Next(-10, 100);
 
-                    Console.Write(array[i,j] + " ");
+                    Console.Write(array[i, j] + " ");
                 }
                 Console.WriteLine();
             }
